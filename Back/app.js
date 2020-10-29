@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 
 app.set('view engine','ejs');
 app.use(bodyParser.json())
-app.use(express.static('../Client'));
+app.use(express.static('views'));
 app.use('/',UsersRoutes)/* 
 
 app.use('/courses',CoursesRoutes) */

@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg  navbar-light bg-light" id="nav">
-            <a class="navbar-brand" href="/">CAP sur les fourneaux</a>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="nav">
+            <a class="navbar-brand" href="#">CAP sur les fourneaux</a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/all">Tous les cours</a>
@@ -66,48 +66,59 @@
             </li>
         </ul>
             </nav>
-        <div class="row">
-            <h1 class="mx-auto d-block">Catégories</h1>
-        </div>
-        
-        <div class="row">
-            <div class="card">
-                <a href="/tarte"><img class="card-img-top" src="<%= cat[5] %>" alt="" srcset=""></a>
-                <div class="card-body">
-                    <p class="card-text"><%= title[1] %></p>
+            <header>
+            <div class="row">
+                <img src="./img/bg.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+        </header>
+            <div class="row">
+                <div class="col"></div>
+            </div>
+            <div class="row align-items-center">
+                <h1 class="my-4">
+                    Qui sommes nous ?
+                </h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-7">
+                    
+                    <p class="my-4">
+                        Nous sommes un collectif de patissier ou passionné de patisserie qui donnons de notre temps pour vous aider
+                    </p>
+                    
                 </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="<%= cat[4] %>" alt="" srcset="">
-            <div class="card-body">
-                <p class="card-text"><%= title[0] %></p>
+                <div class="col-5">
+                    <img src="./img/qui.jpg" class= "rounded mx-auto d-block"alt="pk" srcset="">
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="<%= cat[2] %>" alt="" srcset="">
-            <div class="card-body">
-                <p class="card-text"><%= title[4] %></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <img class="card-img-top" src="./img/pastry.jpg" alt="" srcset="">
-                <div class="card-body">
-                    <p class="card-text">Pâte à choux</p>
+            <div class="row">
+                  <div class="col-4">
+                    <img id="im" src="./img/gat1.jpg" class="img-fluid"  alt="1" srcset="">
                   </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="./img/croissant.jpg" alt="" srcset="">
-            <div class="card-body">
-                <p class="card-text">Vienoiserie</p>
-              </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./img/base.jpg" alt="" srcset="">
-        <div class="card-body">
-            <p class="card-text">Les bases</p>
-          </div>
-</div>
+                  <div class="col-4">
+                    <img  id="im" src="./img/gat2.jpg" class="img-fluid"  alt="2" srcset="">
+                  </div>
+                  <div class="col-4">
+                    <img  id="im" src="./img/gat3.jpg" class="img-fluid"  alt="3" srcset="">
+                  </div>
+            </div>
+            <div class="row align-items-center">
+                <h1 class="my-4">
+                    Notre but :
+                </h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-7">
+                    
+                    <p class="my-4">
+                       Nous avons créer ce site afin de vous coacher, vous donner des tips afin d'attaquer le passage de CAP patisserie sereinement
+                    </p>
+                    
+                </div>
+                <div class="col-5">
+                    <img src="../img/but.jpg" class= "rounded mx-auto d-block"alt="moi" srcset="">
+                </div>
+            </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

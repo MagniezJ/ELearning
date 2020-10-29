@@ -1,0 +1,74 @@
+html{
+    width: 100%;
+}
+body{
+
+    background-color: #F5F2F2;
+}
+.container{
+    width: 111%;
+}
+.img-fluid{
+    max-width: 118%;
+    margin-left:-9%;
+}
+
+#nav{
+    width: 122%;
+    margin-left: -11%;
+}
+
+#im{
+    padding: 12%;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #C4C4C4;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #C4C4C4;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #6d7fcc;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    text-decoration: none;
+    color:black;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+   align-items: stretch;
+}
+
+#video{
+    margin-left: 5%;
+}

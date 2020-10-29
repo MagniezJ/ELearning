@@ -1,5 +1,6 @@
 const User = require('../models/users');
 const bcrypt=require('bcrypt');
+const jwt= require('jsonwebtoken')
 module.exports = {
     
     readAll (req,res) {
@@ -13,9 +14,7 @@ module.exports = {
             nom: req.body.nom,
             prenom: req.body.prenom,
             email: req.body.email,
-            Password:req.body.Password,
-            photoUser: req.body.photoUser,
-            Category:req.body.Category
+            Password:req.body.Password
         })
         user.save(); 
     },
@@ -35,7 +34,7 @@ module.exports = {
                 console.log(same)
                 console.log(error)
                 if(same==true){
-                    res.send("connexion reussie")
+                    res.send("connexion reussie") // JWT dans ce coin 
                 }
                 else{
                     res.send("Mauvais mot de passe")
@@ -50,11 +49,11 @@ module.exports = {
         }});
     },
     AddCategory(req,res){
-        User.findOne({email: req.body.email}).then((user)=>{
+        User.findOne({email: req.body.email}).then((user)=>{ //middleware qui check user 
             if(user!== null){
                 bcrypt.compare(req.body.Password,user.Password,(function(error,same){
-                     if(same==true){
-                    User.findOneAndUpdate({Category:user.Category},{Category:req.body.Category}).then(()=>{
+                    if(same){
+                        User.findOneAndUpdate({Category:user.Category},{Category:req.body.Category}).then(()=>{ //a revoir
                         console.log("update"+user.Category)
                     })
                 }
@@ -66,5 +65,9 @@ module.exports = {
                 }
             }))
     } }
-        )}
+        )},
+        inscription(req,res){
+            res.render('inscription');
+        },
+        
 }

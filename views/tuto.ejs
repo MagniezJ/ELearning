@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap au forneau</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7e5440b328.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light" id="nav">
+            <a class="navbar-brand" href="/">CAP sur les fourneaux</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/all">Tous les cours</a>
+                </li>
+            </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Mes Cours</a>
+                </li>
+                <li class="nav-item active">
+                    <button class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#exampleModal"  type="button">
+                        <i class="far fa-user"></i> 
+                    </button>
+           
+        
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-user"></i> Connexion </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Identifiant" >
+                        <br/>
+                        <input type="text" class="form-control" placeholder="Mot de passe" >
+                        <br/>
+                        <div class="row">
+                            <button type="submit" class="btn btn-secondary btn-lg btn-block" >
+                              Connexion
+                            </button>
+                          </div>
+                          <hr/>
+                          <div class="row">
+                              
+                              <a href="/inscription" class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true">Inscription</a>
+                            </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><%= cat[0].TitreCate %></h3>
+            </div>
+    
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#"><%= cat[0].TitreSSCaté %></a>
+                </li>
+                <li>
+                    <a href="#"><%= cat[1].TitreSSCaté %></a>
+                </li>
+                <li>
+                    <a href="#"><%= cat[2].TitreSSCaté %></a>
+                </li>
+                <li>
+                    <a href="#"><%= cat[3].TitreSSCaté %></a>
+                </li>
+                
+                <li>
+                    <a href="#"><%= cat[4].TitreSSCaté %></a>
+                </li>
+                <li>
+                    <a href="#"><%= cat[5].TitreSSCaté %></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row" style="margin-left:3%">
+            <iframe id="video" width="560" height="315" src="<%= app[0].VideoSSCaté %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            <div class="row">
+                <div class="col">
+                    <h2>Materiel</h2>
+                    <ul>
+                    <%- app[0].Materiel%>
+                </ul>
+                </div>
+                <div class="col" style="margin-left:20%">
+                    <h2>Ingredient</h2>
+                    <ul>
+            <%- app[0].Ingrédient%>
+        </ul>
+        </div>
+            </div>
+            <ol>
+            <%- app[0].Contenu%>
+        </ol>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

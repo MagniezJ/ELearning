@@ -31,6 +31,28 @@ module.exports = {
         })
     },
     home(req,res){
-        res.render('category')
-    }
+        res.render('index')
+    },
+    categora(req,res){
+        Cat.distinct('photoCaté').then((cate)=>{
+            Cat.distinct('TitreCate').then((titre)=>{
+                res.render('category',{cat:cate,title:titre})
+            })
+        })
+    },
+    tarte(req,res){
+        Cat.find({TitreCate:'Tarte'}).then((cate)=>{
+            
+                res.render('sscat',{cat:cate})
+            
+        })
+    },
+    apple(req,res){
+        Cat.find({TitreCate:'Tarte'}).then((cate)=>{
+        Cat.find({TitreSSCaté:'Tarte aux pommes'}).then((apple)=>{
+            res.render('tuto',{cat:cate,app:apple})
+    })
+        })
+},
+
 }

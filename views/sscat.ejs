@@ -67,45 +67,45 @@
         </ul>
             </nav>
         <div class="row">
-            <h1 class="mx-auto d-block">Catégories</h1>
+            <h1 class="mx-auto d-block"><%= cat[0].TitreCate %></h1>
         </div>
         
         <div class="row">
             <div class="card">
-                <a href="/tarte"><img class="card-img-top" src="<%= cat[5] %>" alt="" srcset=""></a>
+                <a href="/applepie"><img class="card-img-top" src="<%= cat[0].photoSSCaté %>" alt="" srcset=""></a>
                 <div class="card-body">
-                    <p class="card-text"><%= title[1] %></p>
+                    <p class="card-text"><%= cat[0].TitreSSCaté %></p>
                 </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="<%= cat[4] %>" alt="" srcset="">
+            <img class="card-img-top" src="<%= cat[1].photoSSCaté %>" alt="" srcset="">
             <div class="card-body">
-                <p class="card-text"><%= title[0] %></p>
+                <p class="card-text"><%= cat[1].TitreSSCaté %></p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="<%= cat[2] %>" alt="" srcset="">
+            <img class="card-img-top" src="<%= cat[2].photoSSCaté %>" alt="" srcset="">
             <div class="card-body">
-                <p class="card-text"><%= title[4] %></p>
+                <p class="card-text"><%= cat[2].TitreSSCaté %></p>
             </div>
         </div>
         <div class="row">
             <div class="card">
-                <img class="card-img-top" src="./img/pastry.jpg" alt="" srcset="">
+                <img class="card-img-top" src="<%= cat[3].photoSSCaté %>" alt="" srcset="">
                 <div class="card-body">
-                    <p class="card-text">Pâte à choux</p>
+                    <p class="card-text"><%= cat[3].TitreSSCaté %></p>
                   </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="./img/croissant.jpg" alt="" srcset="">
+            <img class="card-img-top" src="<%= cat[4].photoSSCaté %>" alt="" srcset="">
             <div class="card-body">
-                <p class="card-text">Vienoiserie</p>
+                <p class="card-text"><%= cat[4].TitreSSCaté %></p>
               </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="./img/base.jpg" alt="" srcset="">
+        <img class="card-img-top" src="<%= cat[5].photoSSCaté %>" alt="" srcset="">
         <div class="card-body">
-            <p class="card-text">Les bases</p>
+            <p class="card-text"><%= cat[5].TitreSSCaté %></p>
           </div>
 </div>
     </div>
