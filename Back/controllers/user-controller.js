@@ -55,21 +55,16 @@ module.exports = {
     AddCategory(req,res){
         User.findOne({email: req.body.email}).then((user)=>{ //middleware qui check user 
             if(user!== null){
-                bcrypt.compare(req.body.Password,user.Password,(function(error,same){
-                    if(same){
                         User.findOneAndUpdate({Category:user.Category},{Category:req.body.Category}).then(()=>{ //a revoir
-                        console.log("update"+user.Category)
+                        console.log("update"+user+user.Category)
+                        res.redirect('/applepie')
                     })
                 }
                 else{
-                    res.send("Mauvais mot de passe")
-                }
-                if(error != undefined){
-                    res.send("code erreur :"+error)
-                }
-            }))
-    } }
-        )},
+                    res.send("mauvais")
+              
+            }
+    }) },
         inscription(req,res){
             res.render('inscription');
         },
