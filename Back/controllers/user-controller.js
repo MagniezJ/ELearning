@@ -1,6 +1,9 @@
 const User = require('../models/users');
 const bcrypt=require('bcrypt');
-const jwt= require('jsonwebtoken')
+const jwt= require('jsonwebtoken');
+const bodyParser = require('body-parser');
+
+const data=require('../Data/data');
 module.exports = {
     
     readAll (req,res) {
@@ -9,38 +12,38 @@ module.exports = {
         });
     },
     createuser(req,res){
-        console.log(req.body);
+        
+        if (req.body.nom==''||req.body.prenom==''||req.body.email==''||req.body.Password==''){
+            res.render("inscription")
+            console.log("wtf dude")
+        }else{
         const user=new User({
             nom: req.body.nom,
             prenom: req.body.prenom,
             email: req.body.email,
             Password:req.body.Password
         })
+        console.log(req.body);
         user.save(); 
+        res.redirect('/');}
     },
     deleteuser(req,res){
-        User.findOneAndRemove({prenom:"Justine"}).then(()=>{
+        User.findOneAndRemove({ email: req.body.email}).then(()=>{
             console.log("delete");
+            res.redirect('/')
         })
     },
     findAndLog(req,res){
         User.findOne({email: req.body.email}).then((user)=>{
-        console.log(user);
         //bcrypt.compare(password,this.local.password)
         if(user!== null){
             bcrypt.compare(req.body.Password,user.Password,(function(error,same){
-                console.log(user.Password)
-                console.log(req.body.Password)
-                console.log(same)
-                console.log(error)
                 if(same==true){
-                    res.send("connexion reussie") // JWT dans ce coin 
+                    console.log(user)
+                    res.render("profil",{user:user}) // JWT dans ce coin 
                 }
                 else{
-                    res.send("Mauvais mot de passe")
-                }
-                if(error != undefined){
-                    res.send("code erreur :"+error)
+                    res.send(error)
                 }
             }))
             
@@ -48,6 +51,7 @@ module.exports = {
             res.sendStatus(401).send('Utilisateur non reconnu')
         }});
     },
+
     AddCategory(req,res){
         User.findOne({email: req.body.email}).then((user)=>{ //middleware qui check user 
             if(user!== null){

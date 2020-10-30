@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap au forneau</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7e5440b328.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light" id="nav">
+            <a class="navbar-brand" href="/">CAP sur les fourneaux</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/all">Tous les cours</a>
+                </li>
+            </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Mes Cours</a>
+            </li>
+                <button class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#exampleModal"  type="button">
+                    <i class="far fa-user"></i> <%- user.nom%> <%- user.prenom%>
+                </button>
+            </ul>
+        </nav>
+        <div class="row">
+            <p> Nom:  <%- user.nom %></p></br>
+        </div>
+        <div class="row">
+            <p> Prenom:  <%- user.prenom %></p></br>
+        </div>
+    <div class="row">
+                    <p> Email:  <%- user.email %></p>
+        </div>
+        <div class="row">
+            <a href="/delete">se désincrire</a>
+        </div>
+    </div>
+    <footer class="footer" style="background-color: #C4C4C4;">
+        <div class="container">
+            <div class='row'>
+                <div class="col-2">
+                    <h3 class=" mx-auto d-block"> Cap sur les fourneaux</h3>
+                </div>
+                <div class="col-6">
+                    <h4 class=" mx-auto d-block"> Le site qui vous guide vers le CAP Patisserie</h4>
+                </div>
+                <div class="col-4" style="padding:5%">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.7535354993104!2d-0.12430410941998107!3d51.51295654374329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccf9dc6f59%3A0x43d20760338f1f0!2sHobbs!5e0!3m2!1sfr!2sfr!4v1604053437823!5m2!1sfr!2sfr" width="200" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+    </html>

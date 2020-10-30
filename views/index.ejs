@@ -26,9 +26,8 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Mes Cours</a>
             </li>
-            <li class="nav-item active">
                 <button class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#exampleModal"  type="button">
-                    <i class="far fa-user"></i> 
+                    <i class="far fa-user"></i> Connexion
                 </button>
        
     
@@ -43,10 +42,10 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <input type="text" class="form-control" placeholder="Identifiant" >
+                <form method='POST'>
+                    <input type="email" name="email" class="form-control" placeholder="Identifiant" >
                     <br/>
-                    <input type="text" class="form-control" placeholder="Mot de passe" >
+                    <input type="password" name="Password" class="form-control" placeholder="Mot de passe" >
                     <br/>
                     <div class="row">
                         <button type="submit" class="btn btn-secondary btn-lg btn-block" >
@@ -63,7 +62,6 @@
           </div>
         </div>
       </div>
-            </li>
         </ul>
             </nav>
             <header>
@@ -120,6 +118,21 @@
                 </div>
             </div>
     </div>
+    <footer class="footer" style="background-color: #C4C4C4;">
+        <div class="container">
+            <div class='row'>
+                <div class="col-2">
+                    <h3 class=" mx-auto d-block"> Cap sur les fourneaux</h3>
+                </div>
+                <div class="col-6">
+                    <h4 class=" mx-auto d-block"> Le site qui vous guide vers le CAP Patisserie</h4>
+                </div>
+                <div class="col-4" style="padding:5%">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.7535354993104!2d-0.12430410941998107!3d51.51295654374329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccf9dc6f59%3A0x43d20760338f1f0!2sHobbs!5e0!3m2!1sfr!2sfr!4v1604053437823!5m2!1sfr!2sfr" width="200" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 

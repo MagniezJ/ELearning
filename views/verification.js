@@ -4,6 +4,7 @@ const mdp= document.getElementById('Password');
 const mdp2=document.getElementById('mdp2');
 const form= document.getElementById('sign');
 const email=document.getElementById('Email');
+const check=document.getElementById('confirm');
 
 name.addEventListener("keyup", ()=>{
     
@@ -75,3 +76,4 @@ mdp2.addEventListener("keyup", ()=>{
     }
     }
 });
+
